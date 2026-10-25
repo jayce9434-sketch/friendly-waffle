@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0b0f" />
+  <title>Collision Ring</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="game-wrap" aria-label="Collision Ring simulation">
+      <canvas id="game" width="900" height="900"></canvas>
+    </section>
+
+    <section class="stats" aria-label="Simulation statistics">
+      <div class="stat">
+        <span class="label">BALLS</span>
+        <span id="ballCount" class="value">2</span>
+      </div>
+      <div class="stat">
+        <span class="label">BALLS / SEC</span>
+        <span id="spawnRate" class="value">0.0</span>
+      </div>
+      <div class="stat">
+        <span class="label">COLLISIONS</span>
+        <span id="collisionCount" class="value">0</span>
+      </div>
+      <div class="stat">
+        <span class="label">COLLISIONS / SEC</span>
+        <span id="collisionRate" class="value">0.0</span>
+      </div>
+    </section>
+
+    <div class="controls">
+      <button id="pauseBtn" type="button">PAUSE</button>
+      <button id="resetBtn" type="button">RESET</button>
+      <button id="soundBtn" type="button" aria-pressed="true">SOUND: ON</button>
+    </div>
+
+    <p class="hint">Every ball-to-ball collision spawns a new ball.</p>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
